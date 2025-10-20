@@ -1,0 +1,106 @@
+/**********************************************************************/
+/*  PROYECTO mecanografía      */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: large;
+    text-align: center;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    
+    min-height: 100vh;
+    background: linear-gradient(to top, rgb(175,255,228), rgb(186,255,189));
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    flex: 1;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(186, 255, 189);
+    padding: 15px 30px;
+    border-bottom: 2px solid rgb(0, 75, 6);
+}
+
+#control-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 2em;
+    gap: 5em;
+}
+
+#time-container, #points-container {
+    display: flex;
+    flex-direction: column;
+
+    height: 4em;
+    width: 2em;
+}
+
+#tiempo, #puntos {
+    font-size: 25px;
+}
+
+.icon {
+    width: 100%;
+    height: auto;
+}
+
+#word-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding-bottom: 0.2em;
+    font-size: 40px;
+}
+
+#test-container {
+    display: flex;
+    gap: 10px;
+
+    font-size: 50px;
+}
+
+#text-input {
+    height: 3em;
+    width: 20em;
+
+    font-size: 20px;
+}
+
+#start {
+    font-size: 20px;
+}
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 30px;
+    border-top: 2px solid rgb(0, 75, 6);
+}

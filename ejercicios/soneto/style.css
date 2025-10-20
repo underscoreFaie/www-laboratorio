@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    color: cyan;
+    background-image: url('../../img/minion.webp');
+    background-size: 10%;
+    background-repeat: repeat repeat;
+    font-family:cursive;
+    font-size:xx-large;
+}
+
+@keyframes rotar {
+    100% {transform:rotate(360deg);}
+}
+
+h1 {
+    font-weight: 900;
+    margin: 100px;
+    margin-bottom: 300px;
+    animation: rotar 2s infinite 0s;
+}
+
+@keyframes color {
+  50%  {background-color: magenta;}
+  100% {background-color: rgb(0, 255, 0);}
+}
+
+p {
+    background-color: rgb(0, 255, 0);
+    color: cyan;
+    animation: color 500ms linear 0s infinite;
+    animation-timing-function: steps(1);
+}
+
+a {
+    background-color: yellow;
+}
+
+
