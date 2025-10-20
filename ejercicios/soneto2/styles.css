@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Base colors sampled from the reference image */
 :root {
   --bg-slate: #666c7f;        /* bluish slate */

@@ -1,0 +1,26 @@
+/* style.css */
+/* Proyecto Tablero */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg_color1: rgb(175,255,228);
+    --bg_color2: rgb(186,255,189);
+    --border_color: rgb(0, 75, 6);
+    font-size: large;
+}
+
+.tablero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.ficha {
+    height:50px;
+    background-color: lightgray;
+    border: 1px solid black;
+}
