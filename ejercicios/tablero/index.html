@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Tablero</title>
     <link rel="stylesheet" href="style.css">
-    <title>Tablero</title>
-  </head>
+</head>
+<body>
 
-  <body>
-    <div id="header">
-      <h1> EJERCICIO TABLERO</h1>
-    </div>
+    <header id="header">
+        <h1>PROYECTO Tablero</h1>
+        <p>Intercambia fichas para que cada fila sea de un solo color.</p>
+    </header>
 
-    <div class="tablero">
-      <div class="ficha" data-ficha></div>
-      <div class="ficha" data-ficha></div>
-      <div class="ficha" data-ficha></div>
-      <div class="ficha" data-ficha></div>
-    </div>
-    
-    <button id="inicio">Inicio</button>
-    <label for="tamañoFicha">Tamaño de la ficha:</label>
-    <select id="tamañoFicha">
-      <option value="pequeña">Pequeña</option>
-      <option value="mediana">Mediana</option>
-      <option value="grande">Grande</option>
-    </select>
-    <label for="tamañoTablero">Tamaño del tablero:</label>
-    <input type="number" id="tamañoTablero" min="1" max="7" value="2">
+    <main id="main">
+        <div id="control-container">
+            <div class="control-group">
+                <label for="tamañoTablero">Tamaño del Tablero (NxN):</label>
+                <input type="number" id="tamañoTablero" value="4" min="2" max="10">
+            </div>
+            <div class="control-group">
+                <label for="tamañoFicha">Tamaño de Ficha (px):</label>
+                <input type="number" id="tamañoFicha" value="80" min="30" max="150" step="10">
+            </div>
+            <button id="inicio">Iniciar Juego</button>
+        </div>
 
-    <div id="footer">
-      <p><a href="../../ejercicios.html">Retornar al hogar</a></p>
-    </div>
+        <div id="tablero-container">
+            <!-- Las fichas del tablero se generarán aquí con JavaScript -->
+        </div>
+    </main>
 
-  </body>
+    <footer id="footer">
+        <p>
+            <span>Desarrollado para la asignatura de IPO</span>
+            <br>
+            <span>Grado en Ingeniería Informática - Tecnologías Informáticas</span>
+            <br>
+            <span>Universidad de Sevilla</span>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
