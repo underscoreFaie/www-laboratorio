@@ -1,28 +1,101 @@
-/*Esto es para quitar los estilos que impone el navegador*/
+/* Paleta de colores principal del proyecto */
+:root {
+    --color-fondo-primario: #666c7f;
+    --color-fondo-secundario: #e9e4da;
+    --color-texto-primario: #2f3545;
+    --color-texto-secundario: #5a6072;
+    --color-borde: #444b5d;
+    --color-enlace: #3d5af1;
+    --color-enlace-hover: #2a3eb1;
+}
+
+/* Reseteo básico y estilos globales */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    color: cyan;
-    background-image: url('img/minion.webp');
-    background-size: 10%;
-    background-repeat: repeat repeat;
-    font-family:cursive;
-    font-size:xx-large;
+html, body {
+    height: 100%;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    background-color: var(--color-fondo-primario);
+    color: var(--color-texto-primario);
 }
 
-h1 {
-    padding:10px;
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-p {
-    font-size: larger;
-    font-style: italic;
+/* Estilos del Header */
+#header {
+    background-color: var(--color-fondo-secundario);
+    padding: 20px 30px;
+    border-bottom: 2px solid var(--color-borde);
+    text-align: center;
 }
 
-a {
-    background-color: yellow
+#header h1 {
+    color: var(--color-texto-primario);
+    margin-bottom: 0.25em;
+}
+
+#header p {
+    color: var(--color-texto-secundario);
+}
+
+/* Contenido Principal */
+#main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+.exercise-list-container {
+    background-color: var(--color-fondo-secundario);
+    padding: 2em 3em;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.exercise-list-container h2 {
+    text-align: center;
+    margin-bottom: 1.5em;
+    color: var(--color-texto-primario);
+}
+
+.exercise-list {
+    list-style: none;
+}
+
+.exercise-list li {
+    margin-bottom: 1em;
+}
+
+.exercise-list a {
+    text-decoration: none;
+    color: var(--color-enlace);
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+}
+
+.exercise-list a:hover {
+    color: var(--color-enlace-hover);
+    text-decoration: underline;
+}
+
+/* Estilos del Footer */
+#footer {
+    text-align: center;
+    padding: 15px 30px;
+    border-top: 2px solid var(--color-borde);
+    background-color: var(--color-fondo-secundario);
+    color: var(--color-texto-secundario);
+    font-size: 0.9rem;
 }
