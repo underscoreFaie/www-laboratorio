@@ -30,8 +30,8 @@ body {
 }
 
 #map-container {
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 3%;
+    margin-bottom: 3%;
     position: relative;
     border: 2px solid rgb(0, 75, 6);
 }
@@ -41,19 +41,43 @@ body {
     width: 80vw;
 }
 
+#map-menu {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(96, 131, 112, 0.863);
+    border-bottom: 2px solid rgb(0, 75, 6);
+}
+
 .marker {
-    width: 20px;
+    width: 2.5vw;
     transform: translate(-50%, -100%);
 }
 
+#menu-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#menu-button img {
+    width: 1vw;
+}
+
 #info-container {
-    width: 10em;
+    width: 25%;
     background-color: rgb(186,255,189);
     border: 2px solid rgb(0, 75, 6);
 }
 
 #info-container #name {
     border-bottom: 2px solid rgb(0, 75, 6);
+    padding: 5%;
+    padding-bottom: 2%;
+}
+
+#info-container #description {
+    padding: 5%;
+    padding-top: 2%;
 }
 
 
@@ -69,7 +93,6 @@ body {
 #footer {
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 15px 30px;
     border-top: 2px solid rgb(0, 75, 6);
 }
