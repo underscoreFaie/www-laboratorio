@@ -43,6 +43,8 @@ body {
 
 #map-menu {
     width: 100%;
+    position:absolute;
+    left: -10000px;
     height: 100px;
     background-color: rgba(96, 131, 112, 0.863);
     border-bottom: 2px solid rgb(0, 75, 6);
@@ -54,6 +56,7 @@ body {
 }
 
 #menu-button {
+    z-index: 10;
     position: absolute;
     top: 0;
     left: 0;

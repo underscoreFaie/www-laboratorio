@@ -2,11 +2,13 @@ let marcadores;
 const marcador_img= 'img/location-pin.png';
 
 const test= document.querySelector('[data-class="test"]');
-const mapContainer= document.querySelector('[data-class="map-container"]');
+const mapContainer= document.querySelector('[data-class="mapContainer"]');
 const map= document.querySelector('[id="map"]');
+const menuButton= document.querySelector('[data-class="menuButton"]');
 const mapMenu= document.querySelector('[id="map-menu"]');
 
 document.addEventListener('DOMContentLoaded', mostrarMarcadores);
+menuButton.addEventListener('click', mostrarMenu)
 
 async function cargarDatos() {
 /* Inicializa la variable marcadores con el contenido de almacen.json
@@ -76,4 +78,11 @@ function eliminarContenido() {
 */
     const contenido= document.querySelector('[id="info-container"]');
     contenido.remove();
+}
+
+function mostrarMenu() {
+    /* Muestra u oculta el menú
+    */
+    if (mapMenu.style.left != '0%') mapMenu.style.left= '0%';
+    else mapMenu.style.left= '-500%';
 }
