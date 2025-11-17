@@ -1,0 +1,153 @@
+/* Paleta de colores principal del proyecto (adaptada del estilo general) */
+:root {
+    --color-fondo-primario: #666c7f; /* Fondo general */
+    --color-fondo-secundario: #e9e4da; /* Fondo de elementos principales, como el piano */
+    --color-texto-primario: #2f3545; /* Color para texto y teclas negras */
+    --color-texto-secundario: #5a6072; /* Color para texto secundario */
+    --color-borde: #444b5d; /* Color para bordes */
+    --color-enlace: #3d5af1;
+    --color-enlace-hover: #2a3eb1;
+
+    /* Colores específicos para el piano */
+    --key-white-bg: var(--color-fondo-secundario);
+    --key-white-border: var(--color-texto-secundario);
+    --key-white-active-bg: #ccc; /* Un poco más oscuro al presionar */
+    --key-black-bg: var(--color-texto-primario);
+    --key-black-border: #000;
+    --key-black-active-bg: #333; /* Un poco más claro al presionar */
+}
+
+/* Reseteo básico y estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    background-color: var(--color-fondo-primario);
+    color: var(--color-texto-primario);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilos del Header */
+#header {
+    background-color: var(--color-fondo-secundario);
+    padding: 20px 30px;
+    border-bottom: 2px solid var(--color-borde);
+    text-align: center;
+}
+
+#header h1 {
+    color: var(--color-texto-primario);
+    margin-bottom: 0.25em;
+}
+
+#header p {
+    color: var(--color-texto-secundario);
+}
+
+/* Contenido Principal */
+#main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+.piano-container {
+    background-color: var(--color-fondo-secundario);
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    width: 100%;
+    max-width: 900px; /* Ancho máximo para el piano */
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    color: var(--color-texto-primario);
+}
+
+.controls select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid var(--color-borde);
+    background-color: white;
+    font-family: var(--sans);
+    font-size: 1rem;
+    color: var(--color-texto-primario);
+}
+
+.piano {
+    position: relative;
+    width: 100%;
+    height: 250px; /* Altura fija para el piano */
+    display: flex;
+    justify-content: center;
+}
+
+.white-keys {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.key.white {
+    width: calc(100% / 8); /* 8 teclas blancas en una octava */
+    height: 100%;
+    background-color: var(--key-white-bg);
+    border: 1px solid var(--key-white-border);
+    border-right: none;
+    border-radius: 0 0 5px 5px;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+.key.white:last-child { border-right: 1px solid var(--key-white-border); }
+.key.white.active { background-color: var(--key-white-active-bg); }
+
+.black-keys { position: absolute; top: 0; left: 0; width: 100%; height: 60%; }
+.key.black {
+    position: absolute;
+    width: calc(100% / 8 * 0.6); /* Ancho relativo a las blancas */
+    height: 100%;
+    background-color: var(--key-black-bg);
+    border: 1px solid var(--key-black-border);
+    border-radius: 0 0 5px 5px;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+    z-index: 1; /* Para que estén por encima de las blancas */
+}
+.key.black.active { background-color: var(--key-black-active-bg); }
+
+/* Posicionamiento de las teclas negras */
+.key.black[data-note="C#4"] { left: calc(100% / 8 - (100% / 8 * 0.6 / 2)); }
+.key.black[data-note="D#4"] { left: calc(100% / 8 * 2 - (100% / 8 * 0.6 / 2)); }
+.key.black[data-note="F#4"] { left: calc(100% / 8 * 4 - (100% / 8 * 0.6 / 2)); }
+.key.black[data-note="G#4"] { left: calc(100% / 8 * 5 - (100% / 8 * 0.6 / 2)); }
+.key.black[data-note="A#4"] { left: calc(100% / 8 * 6 - (100% / 8 * 0.6 / 2)); }
+
+/* Estilos del Footer */
+#footer {
+    text-align: center;
+    padding: 15px 30px;
+    border-top: 2px solid var(--color-borde);
+    background-color: var(--color-fondo-secundario);
+    color: var(--color-texto-secundario);
+    font-size: 0.9rem;
+}
