@@ -2,6 +2,7 @@
 ///	Clase que implementa el jugador
 ///
 import { Movable } from "./Movable.js";
+import { Bullet } from "./Bullet.js";
 
 const test= document.querySelector('[data-class="test"]');
 const SPEED_DECAY_MULT = 0.8;
@@ -25,6 +26,7 @@ export class Player extends Movable {
 	}
 
 	draw() {
+		if (this.shot != null) this.shot.draw();
 		this.ctx.save()
 		this.ctx.translate(this.x, this.y);
 		this.ctx.rotate(this.ang);
@@ -35,7 +37,17 @@ export class Player extends Movable {
 
 	move() {
 		this.shipControl();
+		if (this.shot != null) {
+			this.shot.move();
+			if (this.shot.shotLife == 0) this.shot= null;
+		}
 		super.move();
+	}
+
+	shoot() {
+		if (this.shot==null) {
+			this.shot= new Bullet(this.canvas, this.ctx, this.x, this.y, this.ang);
+		}
 	}
 
 	shipControl() {

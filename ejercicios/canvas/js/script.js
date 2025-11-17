@@ -29,6 +29,7 @@ function move() {
 }
 
 function keyPressed(evt) {
+    evt.preventDefault();
     switch(evt.code) {
         case 'ArrowRight': 
             player1.keyHeld_RIGHT= true;
@@ -39,10 +40,13 @@ function keyPressed(evt) {
         case 'ArrowUp': 
             player1.keyHeld_UP= true;
             break;
+        case 'Space':
+            player1.shoot();
     }
 }
 
 function keyReleased(evt) {
+    evt.preventDefault();
     switch(evt.code) {
         case 'ArrowRight': 
             player1.keyHeld_RIGHT= false;
