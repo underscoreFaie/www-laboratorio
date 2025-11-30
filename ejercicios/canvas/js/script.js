@@ -1,6 +1,5 @@
 import { Player } from "./Player.js";
 
-const KEY_UP_ARROW = 38, KEY_DOWN_ARROW = 40, KEY_LEFT_ARROW = 37, KEY_RIGHT_ARROW = 39;
 const canvas = document.getElementById("appCanvas");
 const ctx = canvas.getContext("2d");
 const test= document.querySelector('[data-class="test"]');
@@ -20,7 +19,6 @@ requestAnimationFrame(gameLoop);
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
     player1.draw();
 }
 

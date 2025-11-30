@@ -7,7 +7,7 @@ import { Bullet } from "./Bullet.js";
 const test= document.querySelector('[data-class="test"]');
 const SPEED_DECAY_MULT = 0.8;
 const WIDTH= 30, HEIGHT= 60;
-const THRUST = 0.15, TURN_SPD = 0.04*Math.PI;
+const THRUST = 0.05, TURN_SPD = 0.04*Math.PI;
 
 export class Player extends Movable {
 	constructor(canvas, ctx) {

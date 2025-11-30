@@ -1,35 +1,42 @@
-[
+let ubicaciones= [
 {
     "name": "Alezkar",
     "description": "Alezkar es el país más grande de Roshar y la más grande y prominente de las cinco naciones vorin. La gente de este país es conocida como alezi, siendo sus regios colores el azul y el oro. Los alezi son mundialmente conocidos por su militarismo y su naturaleza bélica.",
     "coordX": 1368,
-    "coordY": 617
+    "coordY": 617,
+    "type": 1
 },
 {
     "name": "Jah Keved",
     "description": "Jah Keved es uno de los cinco reinos vorin de Roshar, situado en la mitad oriental del continente. Su capital es Vedenar. A alguien de Jah Keved se le llama veden. ",
     "coordX": 1105,
-    "coordY": 452
+    "coordY": 452,
+    "type": 1
 },
 {
     "name": "Thaylenah",
     "description": "Thaylenah es un reino en una isla al sur de Roshar, con la capital en Ciudad Thaylen. La gente de Thaylenah se llaman thayleños/as y su lenguaje es el thayleño.",
     "coordX": 1141,
-    "coordY": 980
+    "coordY": 980,
+    "type": 1
 },
 {
     "name": "Shinovar",
     "description": "Shinovar es una nación situada al oeste del continente de Roshar. Debido a las montañas que lo separan del resto del continente, Shinovar es diferente tanto ecológica como culturalmente del resto de Roshar. Los nativos de Shinovar son conocidos como los shin.",
     "coordX": 380,
-    "coordY": 574
+    "coordY": 574,
+    "type": 1
 },
 {
     "name": "Lagopuro",
     "description": "El Lagopuro es un lago interior poco profundo ubicado en el centro norte de Roshar. Se conoce a la gente de la región como lagopureños y son de etnia Selay.",
     "coordX": 795,
-    "coordY": 568
+    "coordY": 568,
+    "type": 1
 }
 ]
+
+export default ubicaciones;
 
 
 

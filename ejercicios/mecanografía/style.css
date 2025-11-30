@@ -7,13 +7,12 @@
 }
 
 :root {
-    font-size: large;
-    text-align: center;
-}
+    --color-fondo-primario: hsl(225, 10%, 44%);
+    --color-fondo-secundario: hsl(40, 25%, 80%);
+    --color-borde: hsl(223, 15%, 31%);
 
-html, body {
-    height: 100%;
-    width: 100%;
+    --color-texto-primario: hsl(223, 18%, 22%);
+    --color-texto-secundario: hsl(225, 11%, 40%);
 }
 
 body {
@@ -21,33 +20,30 @@ body {
     flex-direction: column;
     align-items: stretch;
     
+    /*Para que el body ocupe toda la pantalla*/
     min-height: 100vh;
-    background: linear-gradient(to top, rgb(175,255,228), rgb(186,255,189));
 }
 
 #main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    
+    background-color: var(--color-fondo-primario);
 
+    /* Para que el main ocupe todo el body libre */
     flex: 1;
 }
 
 #header {
-    display: flex;
-    flex-direction: column;
-
-    background-color: rgb(186, 255, 189);
-    padding: 15px 30px;
-    border-bottom: 2px solid rgb(0, 75, 6);
+    text-align: center;
+    background-color: var(--color-fondo-secundario);
+    
+    padding: 1.5vh;
+    border-bottom: 2px solid var(--color-borde);
 }
 
 #control-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
     padding: 2em;
     gap: 5em;
 }
@@ -66,7 +62,6 @@ body {
 
 .icon {
     width: 100%;
-    height: auto;
 }
 
 #word-container {
@@ -82,14 +77,12 @@ body {
 #test-container {
     display: flex;
     gap: 10px;
-
     font-size: 50px;
 }
 
 #text-input {
-    height: 3em;
+    height: 3;
     width: 20em;
-
     font-size: 20px;
 }
 
@@ -98,9 +91,8 @@ body {
 }
 
 #footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 30px;
-    border-top: 2px solid rgb(0, 75, 6);
+    text-align: center;
+    padding: 1.5vh;
+    background-color: var(--color-fondo-secundario);
+    border-top: 2px solid var(--color-borde);
 }
