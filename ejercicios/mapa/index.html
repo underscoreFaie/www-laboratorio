@@ -12,6 +12,7 @@
 <body>
   <div id="header">
     <h1> EJERCICIO MAPA</h1>
+    <p>Pasa el ratón por los marcadores para ver más detalles</p>
   </div>
 
   <div id="main">
@@ -19,13 +20,26 @@
     <div data-class="mapContainer" id="map-container">
         <!-- EL MENÚ HAY QUE HACERLO -->
         <button data-class="menuButton" id="menu-button"><img src="img/menu.png"></button>
-        <div id="map-menu"></div>
+        <div id="map-menu">
+          <label class="new-marker-form" for="name-input">Nombre</label>
+          <input class="new-marker-form" id="name-input" type="text" autocomplete="off" placeholder="Comienza a escribir!"/>
+          <label class="new-marker-form" for="description-input">Descripción</label>
+          <textarea class="new-marker-form" id="description-input" type="text" autocomplete="off" placeholder="Comienza a escribir!"></textarea>
+          <button class="new-marker-form" id="confirm">Confirmar</button>
+          <p id="message">Haz click en el lugar donde quieres que esté el marcador</p>
+        </div>
         <img id="map" src="img/roshar_politico.jpg">
     </div>
   </div>
 
   <div id="footer">
-    <p><a href="../../index.html">Retornar al hogar</a></p>
+    <p>
+      <span>Desarrollado para la asignatura de IPO</span>
+      <br>
+      <span>Grado en Ingeniería Informática - Tecnologías Informáticas</span>
+      <br>
+      <span>Universidad de Sevilla</span>
+    </p>
   </div>
   
 </body>

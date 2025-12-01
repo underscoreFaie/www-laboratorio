@@ -14,6 +14,7 @@
 }
 
 body {
+    font-family: 'Montserrat', system-ui, sans-serif;
     /* El flex aquí es para header - main - footer */
     display: flex;
     flex-direction: column;
@@ -85,20 +86,77 @@ body {
 #map-menu {
     display: flex;
     flex-direction: column;
+    align-items: center;    
 
     height: 100%;
     width: 20%;
+    padding: 1.5rem;
+
     position:absolute;
     left: -500%;
     
     background-color: var(--color-fondo-secundario);
 }
 
+#map-menu label {
+    width: 100%;
+    font-weight: 600;
+    margin-top: 1rem;
+    color: var(--color-texto-primario);
+}
+
+#map-menu input, textarea {
+    width: 100%;
+    padding: 0.5rem 0.8rem;
+
+    background: rgba(255,255,255,0.15);
+    border: 1px solid var(--color-borde);
+    border-radius: 6px;
+
+    color: var(--color-texto-primario);
+    font-size: 1rem;
+
+    transition: 0.2s;
+}
+
+#map-menu button {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    margin: 1rem;
+
+    background: var(--color-fondo-primario);
+    color: hsl(255, 100%, 100%);
+    font-size: 1rem;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+#message {
+    width: 100%;
+    margin-top: 0.5rem;
+
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-texto-primario);
+
+    padding: 0.3rem 0.6rem;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 6px;
+
+    line-height: 1.3;
+    display:none;
+}
+
+
 #footer {
     text-align: center;
-    background-color: var(--color-fondo-secundario);
-    padding: 1.5vh;
+    padding: 15px 30px;
     border-top: 2px solid var(--color-borde);
+    background-color: var(--color-fondo-secundario);
+    color: var(--color-texto-secundario);
+    font-size: 0.8rem;
 }
 
 #header {
