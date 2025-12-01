@@ -32,7 +32,7 @@ body { /* Estilo para todo el cuerpo de la página */
 /* Header */
 header { /* La parte de arriba, el encabezado */
   background-color: var(--color-fondo-secundario);
-  padding: 1.5rem 2rem;
+  padding: 1.25rem 2rem;
   text-align: center;
   box-shadow: 0 2px 5px var(--shadow-color);
   border-bottom: 2px solid var(--color-borde);
