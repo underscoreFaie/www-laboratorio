@@ -26,7 +26,6 @@ body {
     min-height: 100vh;
 }
 
-/* Header inspired by mecanografia */
 #header {
     background-color: var(--color-fondo-secundario);
     padding: 15px 30px;
