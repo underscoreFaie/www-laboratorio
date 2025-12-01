@@ -24,7 +24,7 @@ body { /* Estilo para todo el cuerpo de la página */
   background-color: var(--color-fondo-primario);
   color: var(--color-texto-primario);
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
   min-height: 100vh;
   line-height: 1.6;
 }

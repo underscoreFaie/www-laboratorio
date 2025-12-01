@@ -119,6 +119,10 @@ body {
     transition: 0.2s;
 }
 
+#map-menu textarea {
+    height: 100%;
+}
+
 #map-menu button {
     width: 100%;
     padding: 0.7rem 1rem;

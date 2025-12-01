@@ -64,7 +64,6 @@ function generarDiv(marcador, i, is_new=false) {
 
 function mostrarContenido(i, is_new=false) {
 // Añade un div con la información adicional a mapContainer
-    test.innerText= i;
     let marcador= ubicaciones[i];
 
     //Crear div
@@ -110,7 +109,6 @@ function anadirMarcador(evt) {
     */
     let posX= evt.offsetX;
     let posY= evt.offsetY;
-    test.innerText= posX + '(' + map.naturalHeight + ')' + ', ' + posY;
     let marcador= {
         "name": nombre_input.value,
         "description": description_input.value,
