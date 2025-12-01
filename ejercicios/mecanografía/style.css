@@ -86,15 +86,17 @@ body {
     width: 80%;
     height: 5vh;
 
-    gap: 1%;
-    font-size: 10em;
+    gap: 5%;
+    font-size: 20em;
 }
 
 #text-input {
     width: 80%;
+    font-size: 0.05em;
 }
 
 #start {
+    font-size: 0.05em;
     width: 20%;
     background-color: var(--color-fondo-primario);
 }

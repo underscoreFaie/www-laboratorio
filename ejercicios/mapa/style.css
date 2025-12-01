@@ -156,7 +156,7 @@ body {
 
 #footer {
     text-align: center;
-    padding: 15px 30px;
+    padding: 1.5vh;
     border-top: 2px solid var(--color-borde);
     background-color: var(--color-fondo-secundario);
     color: var(--color-texto-secundario);

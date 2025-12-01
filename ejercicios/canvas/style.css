@@ -5,27 +5,30 @@
 }
 
 :root {
-    font-size: large;
-    text-align: center;
+    --color-fondo-primario: hsl(225, 10%, 44%);
+    --color-fondo-secundario: hsl(40, 25%, 80%);
+    --color-borde: hsl(223, 15%, 31%);
+
+    --color-texto-primario: hsl(223, 18%, 22%);
+    --color-texto-secundario: hsl(225, 11%, 40%);
 }
 
-html, body {
-    height: 100%;
-    width: 100%;
-}
 
 body {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    /* El flex aquí es para header - main - footer */
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to top, rgb(175,255,228), rgb(186,255,189));
+    height: 100vh;
 }
 
 #main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-
+    justify-content: center;
+    background-color: var(--color-fondo-primario);
+    /* Para que el main ocupe todo el body libre */
     flex: 1;
 }
 
@@ -35,17 +38,17 @@ body {
 }
 
 #header {
-    display: flex;
-    flex-direction: column;
-
-    background-color: rgb(186, 255, 189);
-    padding: 15px 30px;
-    border-bottom: 2px solid rgb(0, 75, 6);
+    text-align: center;
+    background-color: var(--color-fondo-secundario);
+    padding: 1.5vh;
+    border-bottom: 2px solid var(--color-borde);
 }
 
 #footer {
-    display: flex;
-    flex-direction: column;
-    padding: 15px 30px;
-    border-top: 2px solid rgb(0, 75, 6);
+    text-align: center;
+    padding: 1vh;
+    border-top: 2px solid var(--color-borde);
+    background-color: var(--color-fondo-secundario);
+    color: var(--color-texto-secundario);
+    font-size: 0.8rem;
 }
