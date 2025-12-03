@@ -5,18 +5,14 @@ import { Movable } from "./Movable.js";
 import { Bullet } from "./Bullet.js";
 
 const test= document.querySelector('[data-class="test"]');
-const SPEED_DECAY_MULT = 0.8;
+const SPEED_DECAY_MULT = 0.95;
 const WIDTH= 30, HEIGHT= 60;
-const THRUST = 0.05, TURN_SPD = 0.04*Math.PI;
+const THRUST = 0.3, TURN_SPD = 0.04*Math.PI;
 
 export class Player extends Movable {
 	constructor(canvas, ctx) {
 		super(canvas)
 		this.ctx= ctx;
-		this.reset()
-	}
-
-	reset() {
 		this.ang = 0;
 		this.x = this.canvas.width/2;
 		this.y = this.canvas.height/2;
@@ -27,6 +23,8 @@ export class Player extends Movable {
 
 	draw() {
 		if (this.shot != null) this.shot.draw();
+		//Dibujar rectángulo rotado
+		// TODO - Cambiarlo por el dibujo de la nave (usando path): A
 		this.ctx.save()
 		this.ctx.translate(this.x, this.y);
 		this.ctx.rotate(this.ang);
@@ -51,6 +49,8 @@ export class Player extends Movable {
 	}
 
 	shipControl() {
+		/* Manejar teclas
+		*/
 		if (this.keyHeld_UP) {
 			this.speedX += Math.sin(this.ang)*THRUST; 
 			this.speedY -= Math.cos(this.ang)*THRUST;
@@ -61,5 +61,7 @@ export class Player extends Movable {
 		if (this.keyHeld_LEFT) {
 			this.ang -= TURN_SPD;
 		}
+		this.speedX= this.speedX*SPEED_DECAY_MULT;
+		this.speedY= this.speedY*SPEED_DECAY_MULT;
 	}
 }

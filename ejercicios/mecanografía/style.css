@@ -33,6 +33,7 @@ body {
     align-self: center;
 
     width: 50%;
+    min-width: fit-content;
     margin: 10%;
     background-color: var(--color-fondo-secundario);
 
@@ -54,28 +55,30 @@ body {
     justify-content: space-between;
 
     width: 30%;
+    min-width: fit-content;
 }
 
 #time-container, #points-container {
     display: flex;
     flex-direction: column;
 
-    height: 3.5em;
+    height: 3.5em;  
     width: 2.5em;
     margin: 1em;
 }
 
 #tiempo, #puntos {
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2.5rem;
 }
 
 .icon {
     align-self: center;
-    width: 100%;
+    width: 40px;
 }
 
 #word-container {
+    text-align: center;
     padding-bottom: 0.2em;
     font-size: 3em;
 }
@@ -97,7 +100,8 @@ body {
 
 #start {
     font-size: 0.05em;
-    width: 20%;
+    width: fit-content;
+    padding: 5px;
     background-color: var(--color-fondo-primario);
 }
 

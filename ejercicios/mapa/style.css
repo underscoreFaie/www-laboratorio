@@ -108,6 +108,7 @@ body {
 #map-menu input, textarea {
     width: 100%;
     padding: 0.5rem 0.8rem;
+    font-family: inherit;
 
     background: rgba(255,255,255,0.15);
     border: 1px solid var(--color-borde);
@@ -115,8 +116,6 @@ body {
 
     color: var(--color-texto-primario);
     font-size: 1rem;
-
-    transition: 0.2s;
 }
 
 #map-menu textarea {
@@ -128,7 +127,7 @@ body {
     padding: 0.7rem 1rem;
     margin: 1rem;
 
-    background: var(--color-fondo-primario);
+    background-color: var(--color-fondo-primario);
     color: hsl(255, 100%, 100%);
     font-size: 1rem;
     font-weight: 600;
@@ -145,8 +144,7 @@ body {
     color: var(--color-texto-primario);
 
     padding: 0.3rem 0.6rem;
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid var(--color-borde);
     border-radius: 6px;
 
     line-height: 1.3;

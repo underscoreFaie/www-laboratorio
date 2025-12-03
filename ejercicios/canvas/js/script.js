@@ -26,7 +26,10 @@ function move() {
     player1.move();
 }
 
+//CONTROLES
 function keyPressed(evt) {
+    /* Manejar pulsación de teclas
+    */
     evt.preventDefault();
     switch(evt.code) {
         case 'ArrowRight': 
@@ -44,6 +47,8 @@ function keyPressed(evt) {
 }
 
 function keyReleased(evt) {
+    /* Manejar releseación de teclas
+    */
     evt.preventDefault();
     switch(evt.code) {
         case 'ArrowRight': 
