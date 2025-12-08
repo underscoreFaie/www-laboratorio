@@ -14,6 +14,7 @@ export class Player extends Movable {
 		super(canvas)
 		this.ctx= ctx;
 		this.ang = 0;
+		this.radius= 30;
 		this.x = this.canvas.width/2;
 		this.y = this.canvas.height/2;
 		this.speedX= this.speedY= 0;
@@ -28,9 +29,28 @@ export class Player extends Movable {
 		this.ctx.save()
 		this.ctx.translate(this.x, this.y);
 		this.ctx.rotate(this.ang);
-		this.ctx.fillStyle = 'white';
-		this.ctx.fillRect(- WIDTH/2,- HEIGHT/2, WIDTH, HEIGHT);
+		this.ctx.beginPath();
+		this.ctx.moveTo(-20, 20);
+		this.ctx.lineTo(0, -20);
+		this.ctx.lineTo(20, 20);
+		this.ctx.moveTo(15, 10);
+		this.ctx.lineTo(-15, 10);
+		this.ctx.strokeStyle= 'white';
+		this.ctx.stroke();
 		this.ctx.restore();
+
+		if (this.keyHeld_UP) {
+			this.ctx.save()
+			this.ctx.translate(this.x, this.y);
+			this.ctx.rotate(this.ang);
+			this.ctx.beginPath();
+			this.ctx.moveTo(10, 10);
+			this.ctx.lineTo(0, 20);
+			this.ctx.lineTo(-10, 10);
+			this.ctx.strokeStyle= 'white';
+			this.ctx.stroke();
+			this.ctx.restore();
+		}
 	}
 
 	move() {

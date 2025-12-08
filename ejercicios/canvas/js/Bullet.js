@@ -18,7 +18,8 @@ export class Bullet extends Movable{
     move() {
         if(this.shotLife > 0) {
 			this.shotLife--;
-			super.move();
+			this.x= this.x + this.speedX;
+            this.y= this.y + this.speedY;
 		}
     }
 
